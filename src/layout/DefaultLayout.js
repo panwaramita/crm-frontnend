@@ -2,13 +2,16 @@ import React from "react";
 import Footer from "./partial/Footer.comp";
 import Header from "./partial/Header.comp";
 
-function DefaultLayout({ child }) {
+function DefaultLayout({ child1, child2 }) {
   return (
     <div className='default-layout'>
       <header className='header'>
         <Header />
       </header>
-      <main className='main'>Hello{child}</main>
+      <main className='main'>
+        {/* Hello{child1} */}
+        {child2}
+      </main>
       <footer className='footer'>
         <Footer />
       </footer>
