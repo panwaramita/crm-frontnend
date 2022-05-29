@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 function TiecketTable({ tickets }) {
+  console.log(tickets);
   return (
     <Table striped bordered hover className=''>
       <thead>
@@ -12,11 +13,11 @@ function TiecketTable({ tickets }) {
         </tr>
       </thead>
       <tbody>
-        {!tickets.length ? (
+        {tickets.length ? (
           tickets.map((ele) => (
             <tr key={ele.id}>
               <td>{ele.id}</td>
-              <td>{ele.id}</td>
+              <td>{ele.subject}</td>
               <td>{ele.status}</td>
               <td>{ele.addedAt}</td>
             </tr>
